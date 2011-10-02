@@ -1,0 +1,2 @@
+#!/bin/sh -e
+perl -n $(dirname $0)/mars.pl
