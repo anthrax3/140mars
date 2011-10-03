@@ -1,0 +1,14 @@
+#!ruby1.9
+
+r = eval(File.new(File.expand_path('../mars.rb', __FILE__)).read)
+
+$<.inject('') do |p, n|
+  l = p + n
+
+  if l.scan(/(.+) (.+) (.)\n(.+)/).empty?
+    l
+  else
+    puts r.($1.to_i, $2.to_i, 'NESW'.index($3), $4) * ' '
+    ''
+  end
+end

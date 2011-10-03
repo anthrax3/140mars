@@ -1,0 +1,14 @@
+#!ruby1.9
+
+require File.expand_path('../mars', __FILE__)
+
+$<.inject('') do |p, n|
+  l = p + n
+
+  if l.scan(/(.+) (.+) (.)\n(.+)/).empty?
+    l
+  else
+    puts m($1.to_i, $2.to_i, $3, $4) * ' '
+    ''
+  end
+end
