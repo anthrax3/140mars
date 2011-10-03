@@ -1,7 +1,9 @@
 #!/bin/sh -e
 
+i="$(wc -c $(dirname $1)/answer | egrep -o [0-9]+) $(cat $(dirname $1)/README)"
+
 if [ $(lib/expect $1 | grep -c PASS) -eq 2 ]; then
-  echo PASS $(cat $(dirname $1)/README)
+	echo PASS $i
 else
-  echo FAIL $(cat $(dirname $1)/README)
+	echo FAIL $i
 fi

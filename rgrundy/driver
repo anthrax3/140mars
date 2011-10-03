@@ -1,6 +1,6 @@
 #!ruby1.9
 
-r = eval(File.new(File.expand_path('../mars.rb', __FILE__)).read)
+r = eval(File.new(File.expand_path('../answer', __FILE__)).read)
 
 $<.inject('') do |p, n|
   l = p + n

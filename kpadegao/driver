@@ -1,6 +1,6 @@
 #!ruby1.9
 
-require File.expand_path('../mars', __FILE__)
+load File.expand_path('../answer', __FILE__)
 
 $<.inject('') do |p, n|
   l = p + n

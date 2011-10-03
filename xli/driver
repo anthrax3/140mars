@@ -4,4 +4,4 @@ def p args
   puts args * ' '
 end
 
-eval(File.new(File.expand_path('../mars.rb', __FILE__)).read)
+eval(File.new(File.expand_path('../answer', __FILE__)).read)
