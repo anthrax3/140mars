@@ -13,17 +13,25 @@ send "MMRMMRMRRM\n"
 send "0 0 E\n"
 send "MRMLM\n"
 
+send "0 0 N\n"
+send "RRRR\n"
+
 expect {
   "1 3 N" { puts PASS }
-  timeout { puts FAIL exit }
+  timeout { puts FAIL ; exit }
 }
 
 expect {
   "5 1 E" { puts PASS }
-  timeout { puts FAIL exit }
+  timeout { puts FAIL ; exit }
 }
 
 expect {
   "2 -1 E" { puts PASS }
-  timeout { puts FAIL exit }
+  timeout { puts FAIL ; exit }
+}
+
+expect {
+  "0 0 N" { puts PASS }
+  timeout { puts FAIL ; exit }
 }
